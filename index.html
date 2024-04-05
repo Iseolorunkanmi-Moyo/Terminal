@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="./logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./logo.PNG" class="logo">
+        </a>
+
+        <div class="header-icon-div">
+            <div id="searchBtnSub"><img class="header-icon" src="./Search-svg.svg" alt="" /></div>
+            <div><img class="header-icon" src="./notification.svg" alt="" /></div>
+            <div><img class="header-icon" src="./profile.png" alt="" /></div>
+        </div>
+
+        <div class="searchDiv" id="searchDiv">
+            <button id="header-return" class="header-return"><img src="./left-arrow.svg" class="header-icon"
+                    alt="" /></button>
+            <div class="searchMainDiv">
+                <input class="searchInput" id="searchInput" type="text" placeholder="Search..."/>
+                <button class="searchBtn" id="searchBtn">
+                    <img class="header-icon" src="./Search-svg.svg" alt="" />
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div>
+
+            <section id="home">
+                one
+            </section>
+
+            <section id="latest">
+                two
+            </section>
+
+            <section id="posts">
+                three
+            </section>
+
+            <section id="inbox">
+                four
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <button id="homeBtn" class="footer-div">
+            <img class="footer-icon" src="./home-icon-silhouette-svgrepo-com.svg" alt="">
+            <span>Home</span>
+        </button>
+
+        <button id="latestBtn" class="footer-div">
+            <img class="footer-icon" src="./trend-svgrepo-com.svg" alt="">
+            <span>Trending</span>
+        </button>
+
+        <button id="postsBtn" class="footer-div">
+            <img class="footer-icon" src="./posts.svg" alt="">
+            <span>Posts</span>
+        </button>
+
+        <button id="inboxBtn" class="footer-div">
+            <img class="footer-icon" src="./chat-svgrepo-com.svg" alt="">
+            <span>Inbox</span>
+        </button>
+
+    </footer>
+
+    <div class="newPost" id="newPost">
+        <img class="plus-icon" src="./plus.svg" alt="">
+    </div>
+
+    <div id="createPost" class="createPost">
+        <div class="createPostDiv">
+            <div class="postHeader">
+                <button id="closePostDiv"><img class="" src="./left-arrow.svg" alt=""></button>
+                <h3>Post</h3>
+                <div></div>
+            </div>
+
+            <form action="" class="newPostForm">
+                <input id="title" type="text" placeholder="Title">
+                <textarea id="comment" type="text" placeholder="Post"></textarea>
+            </form>
+
+            <div class="postCommentDiv">
+                <button id="postComment">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

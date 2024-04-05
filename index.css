@@ -1,0 +1,389 @@
+*{
+    --mainColor: rgb(34, 39, 49);
+    --faintBlack: rgba(0,0,0,0.2) ;
+    --faintWhite: rgba(255, 255, 255, 0.4);
+    font-family: roboto;
+}
+
+@media screen and (max-width:412px) {
+    body{
+        height: 100vh;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        font-family:roboto;
+        scroll-behavior: smooth;
+    }
+
+    header{
+        height: 50px;
+        background-color: var(--mainColor);
+        border-bottom: solid 1px var(--faintBlack) ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5px;
+        z-index: 2;
+    }
+
+    header>a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+    }
+
+    .logo{
+        height: 36px;
+        border-radius: 5px;
+        border: solid 1px white;
+    }
+
+    .header-icon-div{
+        display: flex;
+        gap: 6px;
+        margin-right: 5px;
+        align-items: center;
+        filter: invert();
+    }
+
+    .header-icon-div>div:nth-child(3){
+        /* border: solid 1px var(--faintBlack); */
+        height: 27px;
+        aspect-ratio: 1/1;
+    }
+
+    .header-icon-div > div{
+        border-radius: 50%;
+        padding: 5px;
+        aspect-ratio: 1/1;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-icon-div > div:active{
+        background-color: #e9e7e7;
+    }
+
+    .header-icon{
+        height: 23px;
+    }
+
+    .searchDiv{
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--mainColor);
+        width: 100%;
+        height: 50px;
+    }
+
+    .header-return{
+        height: 30px;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 50%;
+        filter: invert();
+    }
+
+    .header-return:active{
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .header-return > img{
+        height: 30px;
+    }
+
+    .searchMainDiv{
+        width: calc(100% - 40px);
+        height: 30px;
+        margin-right: 10px;
+        background-color:white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        animation: widthPlus 100ms;
+    }
+
+    @keyframes widthPlus {
+        0%{
+            width: 30%;
+        }
+
+        100%{
+            width: calc(100% - 30px);
+        }
+    }
+
+    @keyframes widthMinus {
+        0%{
+            width: calc(100% - 30px);
+        }
+
+        100%{
+            width: 30%;
+        }
+    }
+
+    .searchInput{
+        width: calc(100% - 30px);
+        height: 25px;
+        outline: none;
+        border: none;
+        background-color:white;
+        /* border-radius: 20px; */
+        font-size: 14px;
+    }
+
+    .searchBtn{
+        height:30px ;
+        aspect-ratio: 1/1;
+        background-color: white;
+        border-radius: 0px 20px 20px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: solid 1px var(--faintBlack); */
+        /* border-left: solid 1px var(--faintBlack); */
+        border: none;
+        margin-right: 8px;
+    }
+
+    .searchBtn>img{
+        height: 24px;
+    }
+
+    main{
+        height: calc(100% - 100px);
+        scrollbar-width: thin;
+        overflow: hidden;
+        gap:10px;
+        width: 100vw;
+    }
+
+    main>div{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        flex-direction: column;
+    }
+
+    main>div>section{
+        height: 100%;
+        background-color: ;
+        /* margin-right: 10px; */
+        flex-grow: 1;        
+    }
+
+    #homebtn{
+        display: none;
+    }
+
+    #latest{
+        display: none;
+    }
+
+    #posts{
+        display: none;
+    }
+
+    #inbox{
+        display: none;
+    }
+
+    .createPost{
+        border-top: solid 1px var(--faintWhite);
+        border-bottom: solid 1px var(--faintWhite);
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        height: calc(100vh - 110px);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        background-color: var(--mainColor);
+    }
+
+    .createPostDiv{
+        width: 90%;
+        height: calc(100% - 80px);
+    }
+
+    .postHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .postHeader>h3{
+        margin-right: 40px;
+    }
+
+    #closePostDiv{
+        height: 40px;
+        aspect-ratio: 1/1;
+        background: #222731;
+        border: none;
+    }
+
+    #closePostDiv:active{
+        background-color: #525d742f;
+        border-radius: 50%;
+    }
+
+    #closePostDiv>img{
+        height: 30px;
+        filter: invert();
+    }
+
+    h3{
+        color: white;
+    }
+
+    .newPostForm{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100% - 50px);
+    }
+
+    .newPostForm>input{
+        height: 30px;
+        width: calc(100% -10px);
+        background-color: #525d742f;
+        border: none;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+    .newPostForm>input::placeholder{
+        color: white;
+    }
+
+    #title{
+        font-size: 17px;
+        height: 40px;
+        outline: none;
+        color: white;
+    }
+
+    .postCommentDiv{
+
+    }
+
+    #comment{
+        height: fit-content;
+        min-height: 300px;
+        max-height: 400px;
+        min-width: calc(100% -10px);
+        width: calc(100% -10px);
+        max-width: calc(100% - 10px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: #525d742f;
+        border: none;
+        border-radius: 10px;
+        padding-left: 10px;
+        color: white;
+        margin-top: 10px;
+        outline: none;
+        padding-top: 5px;
+    }
+
+    #postComment{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 40px;
+        font-size: 18px;
+        background-color: #222731;
+        border: solid 1px var(--faintWhite);
+        border-radius: 5px;
+        box-shadow: 0px 3px 0px 0px var(--faintWhite);
+        color: white;
+    }
+
+    #postComment:active{
+        box-shadow: 0px 0px 0px 0px var(--faintWhite);
+        transform: translateY(2px);
+        transition: 100ms;
+    }
+
+    footer{
+        height: 50px;
+        background-color: var(--mainColor);
+        border-top: solid 1px var(--faintBlack) ;
+        padding: 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    footer>a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer-div{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        border: none;
+        padding:2px 5px;
+        background: transparent;
+        color: white;
+    }
+
+    .footer-icon{
+        height: 22px;
+    }
+
+    .newPost{
+        position: fixed;
+        bottom: 60px;
+        right: 10px;
+        height: 40px;
+        aspect-ratio: 1/1;
+        font-size: 40px;
+        font-weight: 350;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--mainColor);
+        border-radius: 50%;
+        color: white;
+        box-shadow: 2px 2px 0px 1px var(--faintBlack), 
+        -1px -1px 1px 1px var(--faintBlack);
+        cursor: pointer;
+    }
+
+    .plus-icon{
+        height: 20px;
+    }
+
+}
+
+@media screen and (min-width:413px)and (max-width:600px) {
+    
+}
